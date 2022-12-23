@@ -1,0 +1,358 @@
+charAt(index):
+return  character according to specified index
+var x="welcome"
+alert(x.charAt(2))
+Example
+<script>
+function call()
+{ var x="Welcome"
+ alert(x.charAt(2))
+}
+</script>
+<html>
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+Example
+<script>
+function call()
+{ var x="this is test program"
+  var c=0
+  for(i=0;i<x.length;i++)
+  {
+    if(x.charAt(i)=='s')
+    {c++;}
+  }
+
+  alert(c)
+
+}
+
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+charCodeAt(index)
+return ascii value character according to given index
+
+Ex
+--
+<script>
+function call()
+{ var x="Pizza Price 590/- Only"
+  var U=0
+  var L=0
+  var D=0
+  var SPS=0
+  var SPL=0
+  for(i=0;i<x.length;i++)
+  { v=x.charCodeAt(i)
+   if(v>=65 && v<=90)
+    { U++}
+   else if(v>=97 && v<=122)
+   { L++}
+   else if(v>=48 && v<=57)
+   { D++}
+   else if(v==32)
+   { SPS++
+   }
+   else
+   { SPL++}
+   }
+   alert(`${U},${L},${D},${SPS},${SPL}`)
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+
+concat(str1,str2...)
+use to concatinate more then one string
+<script>
+function call()
+{  var x='Java'
+   var y='Scripting'
+   var s= x.concat(" ",y," ","Programming")
+   alert(s)
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+endsWith(substr)
+-----------------
+startsWith(substr)
+return true if string ends with specified substr
+otherwise false
+
+<script>
+function call()
+{  var x='Jaipur'
+   alert(x.endsWith('pur'))
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+String.fromCharCode(ascii)
+return character according to given ascii value
+<script>
+function call()
+{  var i=String.fromCharCode(89)
+   alert(i)
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+
+
+Example
+=======
+<script>
+function call()
+{  var city=['Udaipur','Indore','Bhopal','Jaipur','Jhansi']
+   for(i=0;i<city.length;i++)
+    {
+       if(city[i].endsWith('pur') || city[i].endsWith('pal'))
+        {alert(city[i])}
+     }
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+includes(pattern)
+-----------------
+search the specified pattern if exist will return true otherwise false
+<script>
+function call()
+{  var city=['Rampur','Indore','Ramgarh','Jaipur','Jhamsi']
+   for(i=0;i<city.length;i++)
+    {
+       if(city[i].includes('am'))
+        {alert(city[i])}
+     }
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+indexOf(pattern)/search(pattern)
+----------------
+return the index of specified pattern 
+return -1 if pattern does not exist
+<script>
+function call()
+{  var txt="this is java script training session"
+   var i=txt.indexOf('is')
+   alert(i)
+   i=txt.indexOf('is',i+1)
+   alert(i)
+
+   i=txt.indexOf('is',i+1)
+   alert(i)
+   
+substring(si,ei)/slice()
+----------------
+read a string from start index to end index-1
+
+<script>
+function call()
+{  var txt="we are learning java script"
+   var x=txt.substring(5)
+    alert(x)
+    x=txt.substring(7,21)
+    alert(x)
+    x=txt.slice(7,21)
+    alert(x)
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+padEnd(width,[character])/padStart()
+and specified character at end of string
+<script>
+function call()
+{  var txt="1000"
+   var t=txt.padStart(10,'X')
+   alert(t)
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+replace()/replaceAll()
+-----------------------
+<script>
+function call()
+{  var txt="this is test test program"
+   var t=txt.replaceAll("test","javascript")
+
+   alert(t)
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+trim()
+----- 
+removes the leading and trailing spaces
+
+<script>
+function call()
+{  var txt=" AMIT SINGH      "
+   console.log('Original',txt)
+   var t=txt.trim()
+   console.log('Modified',t)
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+Remove Spaces from middle of string
+======================================
+<script>
+function call()
+{  var txt="AMIT                          SINGH"
+   console.log('Original',txt)
+   var t=txt.split(' ')
+   var ns=t[0]+" "+t[t.length-1]
+   console.log(ns)
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+split(substr/char)
+------------------
+this function split the string into string array according to 
+specified char/substr
+
+<script>
+function call()
+{  var txt="Harry Singh#Peter Kumar#Joy Kumar"
+   var t=txt.split('#')
+   console.log(t)
+   alert(t[2])
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+
+
+
+
+
+
+
+

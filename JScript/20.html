@@ -1,0 +1,47 @@
+<script>
+
+function call()
+{ var selectedItem=[]
+
+ if(sl.checked)
+ { selectedItem.push(sl.value)
+
+ }
+
+ if(ll.checked)
+  { selectedItem.push(ll.value)
+
+  }
+
+if(ssl.checked)
+ { selectedItem.push(ssl.value)
+
+ }
+
+ total=0
+ selectedItem.map((item)=>{
+   v=item.split(",")
+   total+=parseInt(v[1])
+
+ })
+
+ result.innerHTML=selectedItem+"<br>"+total
+
+
+
+
+}
+
+</script>
+
+
+
+<html>
+<input type="checkbox" value="Sony Led,90" id="sl">Sony Led
+<input type="checkbox" value="LG Led,100"  id="ll">LG Led
+<input type="checkbox" value="SamSung Led,30"  id="ssl">SamSung Led<br><br>
+
+<input type="button" value="Click here" onclick="call()"><br><br>
+<div id="result"></div>
+
+</html>

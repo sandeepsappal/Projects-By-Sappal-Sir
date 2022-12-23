@@ -1,0 +1,32 @@
+<script>
+
+function call()
+{
+  if(pwd.value==cpwd.value)
+  result.innerHTML="<font color='green'>Matched</font>"
+  else
+  result.innerHTML="<font color='red'>Not Matched</font>"
+
+
+}
+</script>
+
+
+
+<html>
+<input type="password"  id='pwd' placeholder="Password"><br><br>
+
+<input type="password"  id='cpwd' placeholder="Confirm Password" onkeyup="call()">
+<span id='result'></span>
+
+</html>
+
+
+
+
+
+
+
+
+
+

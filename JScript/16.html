@@ -1,0 +1,38 @@
+<script>
+
+function call()
+{  var un=txt.value
+   var error=false
+   for(i=0;i<un.length;i++)
+   { c=un.charCodeAt(i)
+     if(!((c>=65 && c<=90) || (c==32) || (c>=97 && c<=122)))
+     {error=true
+      break;
+        }
+    }
+    if(error)
+    { pic.src='cross.png' }
+    else
+    { pic.src='tick.png'}
+
+}
+</script>
+
+
+
+<html>
+
+<input type="text"  id='txt' placeholder="Enter Ur Fullname.." onkeyup="call()">
+<img  width="10" id='pic'>
+
+</html>
+
+
+
+
+
+
+
+
+
+

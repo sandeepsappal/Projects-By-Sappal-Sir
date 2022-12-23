@@ -1,0 +1,26 @@
+<script>
+function calculate(ch)
+{
+if(ch==1)
+{var t=parseInt(txt1.value)+parseInt(txt2.value)
+ result.innerHTML="Addition:"+t}
+else if(ch==2)
+{
+ var t=txt1.value*txt2.value
+ result.innerHTML="Multiplication:"+t
+}
+}
+
+
+</script>
+
+<html>
+<input type="text" id="txt1" placeholder="First Number..."><br><br>
+<input type="text" id="txt2" placeholder="Second Number..."><br><br>
+<input type="button" value="Addition" onclick="calculate(1)">
+<input type="button" value="Multiply" onclick="calculate(2)">
+
+<br><br>
+<div id="result">See Here...</div>
+
+</html>

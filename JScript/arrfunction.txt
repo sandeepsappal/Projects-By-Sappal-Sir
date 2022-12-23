@@ -1,0 +1,370 @@
+map()
+-----
+->read array elements one by one 
+-> it also process the array element and create new array of processed elements
+
+
+<script>
+function call()
+{  var a=[70,50,40,70,30]
+   /* a.map((item)=>{
+      alert(item)
+    })*/
+
+  /*   a.map(function(item){
+	      alert(item)
+    })*/
+
+  /*   a.map((item,index)=>{
+	      alert(index+","+item)
+    })*/
+
+    var na=a.map((item)=>{
+	      return (item*100)
+    })
+    console.log(na)
+    var r=[56,90,67,23,45,90]
+    var nr=r.map((item)=>{
+		    if(item>=60)
+		    return "PASS"
+		    else
+		    return "FAIL"
+	    })
+	    console.log(nr)
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+EX2
+<script>
+function call()
+{
+  var arr=[50,60,27,45,90,33,67]
+/*
+   arr.map((item)=>{
+   alert(item)
+   })*/
+ /* var na=arr.map((item)=>{
+    var d=item*5/100
+    var n=item-d
+    return n
+
+  })
+  console.log("Actual Amount:",arr)
+  console.log("Offer:",na)*/
+/*
+
+  var na=arr.map((item)=>{
+     if(item%2==0)
+     { return item }
+   })
+  console.log("Even:",na)
+*/
+
+var even=[]
+var odd=[]
+arr.map((item)=>{
+     if(item%2==0)
+     { even.push(item) }
+     else
+     { odd.push(item)}
+   })
+  console.log("Even:",even)
+  console.log("Even:",odd)
+
+
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+filter()
+return element from an array which match the specified condition
+
+example
+<script>
+function call()
+{
+
+ /* var arr=[50,60,27,45,90,33,67]
+
+
+  var na=arr.filter((item)=>{
+
+     return (item%2==0)
+
+    })
+  console.log("Even:",na)
+*/
+/*
+var city=['indore','bhopal','pune','noida','jaipur','udaipur']
+ var na=city.filter((item)=>{
+
+     return (item.includes('o'))
+
+    })
+  console.log("Selected City:",na)
+  */
+ var students=[['Joy',78],['Joe',56],['Rocky',23],['Vicky',88]]
+
+ var result=students.filter((item)=>{
+    return item[1]>=60
+
+ })
+ console.log(result)
+
+
+
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+sort()
+------
+<script>
+function call()
+{
+
+  var arr=[50,60,27,45,90,33,67]
+
+/*
+  var na=arr.sort((a,b)=>{
+
+     return a>b?-1:1
+
+    })
+  console.log("Sorted Elements:",na)
+*/
+/*
+var city=['indore','bhopal','pune','noida','jaipur','udaipur']
+ var na=city.sort((a,b)=>{
+
+     return a<b?-1:1
+
+    })
+  console.log("Sorted City:",na)
+*/
+
+
+ var students=[['Joy',78],['Joe',56],['Rocky',23],['Vicky',88]]
+
+ var result=students.sort((a,b)=>{
+    return a[1]>b[1]?-1:1
+
+ })
+ console.log(result)
+
+
+
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+forEach()
+---------
+traverse an array
+<script>
+function call()
+{
+
+  var arr=[50,60,27,45,90,33,67]
+
+
+  arr.forEach((item)=>{
+    alert(item)
+
+
+    })
+
+
+
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+reduce()
+-------
+<script>
+function call()
+{
+
+  var arr=[50,60,27,45,90,33,67]
+
+  var t=arr.reduce((a,b)=>{
+
+  return a+b})
+  console.log(t)
+
+
+
+
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+Example Reduce
+--------------
+<script>
+function payableAmount(a,b){
+  return a+b[2]
+}
+function call()
+{
+  var arr=[['S22',120000,90000],['Iphone 12',56000,45000],['Iphone 13',60000,50000]]
+  var total=arr.reduce((a,b)=>{
+  return a+b[1]},0)
+  console.log('Total:',total)
+  var pa=arr.reduce(payableAmount,0)
+  console.log("Amount to Pay:",pa)
+  var save=total-pa
+  console.log("You Save:",save)
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+push()
+------
+<script>
+  var arr=[]
+function call()
+{
+
+  arr.push([pn.value,price.value])
+  console.log(arr)
+
+}
+</script>
+
+
+
+<html>
+<input type='text' placeholder='Product Name' id="pn"><br><br>
+<input type='text' placeholder='Price' id="price"><br><br>
+<input type="button" value="Click Here" onclick="call()">
+</html>
+splice()
+--------
+<script>
+
+function call()
+{
+  var arr=['Joy','Peter','Ruby','Alice','Harry','Vicky']
+  arr.splice(arr.indexOf('Harry'),1)
+  console.log(arr)
+
+}
+</script>
+
+
+
+<html>
+
+<input type="button" value="Click Here" onclick="call()">
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

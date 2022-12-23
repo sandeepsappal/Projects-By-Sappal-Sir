@@ -1,0 +1,25 @@
+<script>
+ function getAmount()
+ { var amt=rate.value*qty.value
+   var dis=amt*discount.value/100
+   var na=amt-dis
+
+  var ia=amt.value*rate.value*time.value/100
+  //result.innerHTML="<h1><font color='green'>Amount:"+amt.value+"</font> <font color='red'>Interest Amount:"+ia+"</font></h1>"
+  //result.innerHTML=amt.value+","+rate.value+","+time.value
+   // result.innerHTML="Amount:"+amt.value+"<br>Rate:"+rate.value+"<br>Time:"+time.value+"<br>Interest:"+ia
+   var msg=`<font color='red'>Amount:${amt.value}</font><br>Rate:${rate.value}<br>Time:${time.value}<br>Interest:${ia}`
+   result.innerHTML=msg
+
+ }
+</script>
+
+<html>
+   <input type="text" id="amt" placeholder="Enter Amount..."><br><br>
+   <input type="text" id="rate" placeholder="Enter Rate..."><br><br>
+   <input type="text" id="time" placeholder="Enter Time..."><br><br>
+   <input type="button"  value="Get Amount" onclick="getAmount()" ><br><br>
+   <div id="result">See Here....</div>
+
+
+</html>

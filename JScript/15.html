@@ -1,0 +1,33 @@
+<script>
+
+function call()
+{
+  if(pwd.value==cpwd.value)
+
+  pic.src='tick.png'
+  else
+  pic.src='cross.png'
+
+
+}
+</script>
+
+
+
+<html>
+<input type="password"  id='pwd' placeholder="Password"><br><br>
+
+<input type="password"  id='cpwd' placeholder="Confirm Password" onkeyup="call()">
+<img  width="10" id='pic'>
+
+</html>
+
+
+
+
+
+
+
+
+
+
